@@ -1,4 +1,10 @@
 class MainController < ApplicationController
   def index
-  end  
+    @postsList = Post.all
+  end
+  
+  def post
+    
+  end
+    
 end
