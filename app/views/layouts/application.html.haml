@@ -1,0 +1,32 @@
+!!! 5
+%html{ html_attrs('ru') }
+	%head
+		%meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+		%title Блог-приложение
+		= stylesheet_link_tag :all
+		
+		= javascript_include_tag "jquery.js"
+		= javascript_include_tag "use.js"
+		= csrf_meta_tag
+		
+	%body
+		#wrapper
+			%header#header
+				%h1.header-link
+					=link_to 'Блог', root_path
+			%section#middle
+				#container
+					%p{ :class => "notice" }
+						= notice
+					%p{ :class => "alert" }
+						= alert				
+					#menu
+						= link_to "Index", root_path, :class => "tryitbtn"
+						= render :partial => "shared/authItems"
+						= render :partial => "shared/registrationItems"
+					#content
+						= yield				
+		%footer#footer
+			#copyright
+				%a{ 'href' => 'https://github.com/Mehonoshin/' }
+					%strong

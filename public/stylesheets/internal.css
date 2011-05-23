@@ -1,0 +1,38 @@
+.subject-icon {
+  background-image: url("/images/subject.png") !important; }
+
+.student-icon {
+  background-image: url("/images/student.png") !important; }
+
+.tutor-icon {
+  background-image: url("/images/tutor.png") !important; }
+
+.group-icon {
+  background-image: url("/images/group.png") !important; }
+
+.add-icon {
+  background-image: url("/images/add.png") !important; }
+
+.delete-icon {
+  background-image: url("/images/delete.png") !important; }
+
+.edit-icon {
+  background-image: url("/images/edit.png") !important; }
+
+.add-user-icon {
+  background-image: url("/images/add-user.png") !important; }
+
+.add-group-icon {
+  background-image: url("/images/add-group.png") !important; }
+
+.delete-from-group-icon {
+  background-image: url("/images/delete-from-group.png") !important; }
+
+.copy-icon {
+  background-image: url("/images/copy.png") !important; }
+
+.paste-icon {
+  background-image: url("/images/paste.png") !important; }
+
+.cut-icon {
+  background-image: url("/images/cut.png") !important; }
