@@ -2,8 +2,9 @@ EvroneBlog::Application.routes.draw do
   
   devise_for :users
 
-  root :to => "main#index"
+  root :to => "posts#index"
   resources :posts
+  match 'markup' => 'Static#static'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

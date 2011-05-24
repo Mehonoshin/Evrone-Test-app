@@ -22,6 +22,9 @@
 						= alert				
 					#menu
 						= link_to "Index", root_path, :class => "tryitbtn"
+						= link_to "Markup", '/markup', :class => "tryitbtn"
+						- if user_signed_in?
+							= link_to "Add Post", new_post_path, :class => "tryitbtn"
 						= render :partial => "shared/authItems"
 						= render :partial => "shared/registrationItems"
 					#content

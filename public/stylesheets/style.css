@@ -89,6 +89,9 @@ th {
   font-size: 14px;
   font-weight: bold; }
 
+.form-label {
+  margin-right: 50px; }
+
 .itemcontent {
   width: 80%; }
 

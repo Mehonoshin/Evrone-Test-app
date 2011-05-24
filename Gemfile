@@ -14,6 +14,8 @@ gem "devise"
 gem "haml"
 gem "sass"
 
+gem "will_paginate", "~> 3.0.pre2"
+
 # Deploy with Capistrano
 # gem 'capistrano'
 
