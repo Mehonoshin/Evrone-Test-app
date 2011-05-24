@@ -24,6 +24,16 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
   
+  def update
+    post = Post.find(params[:id])
+    if (current_user.id == post.user_id)    
+      post.title = params[:post][:title]
+      post.textbody = params[:post][:textbody]
+      post.save
+    end
+    redirect_to post_path(post)
+  end
+  
   def edit
     @post = Post.find(params[:id])
     render :action => "new"

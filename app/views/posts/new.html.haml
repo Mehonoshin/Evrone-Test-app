@@ -1,4 +1,4 @@
-= form_for :post, @post, :url => { :action => "create" }, :html => { :class => "app-form" } do |f|
+= form_for(@post) do |f|
 	.item
 		#title
 			= label_tag(:title, "Title", :class => "form-label")
