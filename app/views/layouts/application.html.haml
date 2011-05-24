@@ -2,7 +2,8 @@
 %html{ html_attrs('ru') }
 	%head
 		%meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
-		%title Блог-приложение
+		%title 
+			= t('blog_app')
 		= stylesheet_link_tag :all
 		
 		= javascript_include_tag "jquery.js"
@@ -13,7 +14,7 @@
 		#wrapper
 			%header#header
 				%h1.header-link
-					=link_to 'Блог', root_path
+					=link_to t('blog'), root_path
 			%section#middle
 				#container
 					%p{ :class => "notice" }
@@ -21,10 +22,10 @@
 					%p{ :class => "alert" }
 						= alert				
 					#menu
-						= link_to "Index", root_path, :class => "tryitbtn"
-						= link_to "Markup", '/markup', :class => "tryitbtn"
+						= link_to t('index'), root_path, :class => "tryitbtn"
+						= link_to t('markup'), '/markup', :class => "tryitbtn"
 						- if user_signed_in?
-							= link_to "Add Post", new_post_path, :class => "tryitbtn"
+							= link_to t('add_post'), new_post_path, :class => "tryitbtn"
 						= render :partial => "shared/authItems"
 						= render :partial => "shared/registrationItems"
 					#content

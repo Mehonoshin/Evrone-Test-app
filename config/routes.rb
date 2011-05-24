@@ -4,6 +4,7 @@ EvroneBlog::Application.routes.draw do
 
   root :to => "posts#index"
   resources :posts
+  resources :comments
   match 'markup' => 'Static#static'
   
   # The priority is based upon order of creation:

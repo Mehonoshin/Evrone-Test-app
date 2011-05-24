@@ -85,9 +85,14 @@ th {
 .field-desc {
   font-weight: bold; }
 
-.post-date {
-  font-size: 14px;
-  font-weight: bold; }
+.controls {
+  width: 150px; }
+
+.edit {
+  float: right; }
+
+.delete {
+  float: left; }
 
 .form-label {
   margin-right: 50px; }
@@ -102,7 +107,7 @@ th {
   margin: 10px; }
 
 .item {
-  margin-top: 40px;
+  margin-top: 10px;
   margin-right: 10%;
   padding: 20px;
   background-color: #E1FAC8; }
@@ -153,7 +158,9 @@ th {
   overflow: hidden; }
 
 #content {
-  padding: 100px; }
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px; }
 
 /* Footer
 -----------------------------------------------------------------------------*/

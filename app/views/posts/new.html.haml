@@ -1,10 +1,10 @@
-= form_tag(posts_path, :method => "post") do
-	#title
-		= label_tag(:title, "Title", :class => "form-label")
-		= text_field_tag(:title)
-	#textbody
-		= label_tag(:textbody, "Post text", :class => "form-label")
-		= text_area_tag(:textbody)
-	#button
-		= submit_tag("Add")
-	
+= form_for :post, @post, :url => { :action => "create" }, :html => { :class => "app-form" } do |f|
+	.item
+		#title
+			= label_tag(:title, "Title", :class => "form-label")
+			= f.text_field :title, :size => "60"
+		#textbody
+			= label_tag(:textbody, "Post text", :class => "form-label")
+			= f.text_area :textbody, :size => "60x10"
+		#button
+			= submit_tag "Add"

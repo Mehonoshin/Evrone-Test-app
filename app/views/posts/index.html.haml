@@ -2,9 +2,21 @@
 	.item
 		.itemheader
 			= link_to p.title, post_path(p)
-			%span.post-date
-				= p.created_at.strftime("%Y-%m-%d %H:%M")
 		.itemcontent
+			%h4
+				= p.user.email
+				= t('wrote_at')
+				%span.post-date
+					= p.created_at.strftime("%Y-%m-%d %H:%M")		
 			= p.textbody
+			%hr
+			- if user_signed_in?
+				- if (current_user.id == p.user_id)
+					.controls
+						.edit
+							= button_to t('edit'), edit_post_path(p), :class => "button", :method => :get
+						.delete
+							= button_to t('delete'), post_path(p), :class => "button", :method => :delete
+			%br
 			
 = will_paginate @postsList
