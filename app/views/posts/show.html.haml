@@ -3,3 +3,14 @@
 		= @post.title
 	.itemcontent
 		=@post.textbody
+
+%br
+= render :partial => "shared/commentForm"
+%br	
+
+%h2
+	= t('comments') + ":"
+	
+- @comments.each do |c|
+	.itemheader
+		= c.textbody

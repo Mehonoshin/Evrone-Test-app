@@ -1,0 +1,8 @@
+= form_tag(comments_path, :method => "post") do
+	%h3
+		= label_tag(:textbody, t('your_comment'))
+	%br
+	= text_area_tag(:textbody)
+	= hidden_field_tag(:post_id, @post.id)
+	%br
+	= submit_tag(t('tocomment'), :class => "button")
