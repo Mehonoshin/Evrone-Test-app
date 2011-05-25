@@ -13,6 +13,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "devise"
 gem "haml"
 gem "sass"
+gem "acts-as-taggable-on"
+# gem 'acts_as_taggable_on_steroids'
 
 gem "will_paginate", "~> 3.0.pre2"
 

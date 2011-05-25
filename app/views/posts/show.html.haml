@@ -8,9 +8,12 @@
 = render :partial => "shared/commentForm"
 %br	
 
-%h2
-	= t('comments') + ":"
-	
-- @comments.each do |c|
-	.itemheader
-		= c.textbody
+
+- if (@comments.count > 0)
+	%h2
+		= t('comments') + " " + @comments.count.to_s + ":"	
+	- @comments.each do |c|
+		.itemheader
+			= c.textbody
+- else
+	= t('nocomments')

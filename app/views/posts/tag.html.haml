@@ -1,10 +1,7 @@
-#tag-cloud.item
-	%h3
-		= t('tags_cloud')
-	- @tags.each do |t|
-		= link_to t.name, "/tag/" + t.name
-		
-- @postsList.each do |p|
+%h3
+	= t('posts_tagged_with') + " '" + @tagName + "'"
+
+- @posts.each do |p|
 	.item
 		.itemheader
 			= link_to p.title, post_path(p)
@@ -25,4 +22,3 @@
 							= button_to t('delete'), post_path(p), :class => "button", :method => :delete
 			%br
 			
-= will_paginate @postsList

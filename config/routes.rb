@@ -6,6 +6,7 @@ EvroneBlog::Application.routes.draw do
   resources :posts
   resources :comments
   match 'markup' => 'Static#static'
+  match 'tag/:name' => "Posts#tag"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

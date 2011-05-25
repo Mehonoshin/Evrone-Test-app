@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   
   def index
     @postsList = Post.paginate :page => params[:page], :order => 'created_at DESC'
+    @tags = Post.tag_counts_on(:tags)
   end
   
   def create
@@ -45,6 +46,11 @@ class PostsController < ApplicationController
       post.destroy
     end
     redirect_to root_path
+  end
+  
+  def tag 
+    @posts = Post.tagged_with(params[:name])
+    @tagName = params[:name]
   end
   
 end
