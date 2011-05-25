@@ -1,0 +1,40 @@
+$height: 300px;
+$width: 100px;
+
+.block-left {
+	float: left;
+	height: $height;
+	width: $width;
+	background: url('/images/side-bg.png');
+}
+
+.block-right {
+	float: right;
+	height: $height;
+	width: $width;
+	background: url('/images/side-bg.png');
+}
+
+.block-content {
+	margin-left: $width;
+	margin-right: $width;
+	padding: 10px;
+}
+.block-wrapper {
+	# min-width: 800px;
+	z-index: 1;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.pic {
+	height: $height - 2*10;
+	margin: auto;
+	# margin-left: auto;
+	# margin-right: auto;
+}
+.disabled {
+	display: none;
+}
+.enabled {
+	display: block;
+}

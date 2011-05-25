@@ -1,0 +1,34 @@
+.block-left {
+  float: left;
+  height: 300px;
+  width: 100px;
+  background: url("/images/side-bg.png"); }
+
+.block-right {
+  float: right;
+  height: 300px;
+  width: 100px;
+  background: url("/images/side-bg.png"); }
+
+.block-content {
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 10px; }
+
+.block-wrapper {
+  # min-width: 800px;
+  z-index: 1;
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.pic {
+  height: 280px;
+  margin: auto;
+  # margin-left: auto;
+  # margin-right: auto; }
+
+.disabled {
+  display: none; }
+
+.enabled {
+  display: block; }
