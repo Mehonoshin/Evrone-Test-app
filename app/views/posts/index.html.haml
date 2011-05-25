@@ -3,6 +3,10 @@
 		= t('tags_cloud')
 	- @tags.each do |t|
 		= link_to t.name, "/tag/" + t.name
+
+%br
+%h2
+	= t('posts') + ":"
 		
 - @postsList.each do |p|
 	.item
