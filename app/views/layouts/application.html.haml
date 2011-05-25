@@ -17,6 +17,8 @@
 					=link_to t('blog'), root_path
 			%section#middle
 				#container
+					/ %p{ :class => "message" }
+					/ 	= message
 					%p{ :class => "notice" }
 						= notice
 					%p{ :class => "alert" }
