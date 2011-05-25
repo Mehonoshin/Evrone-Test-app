@@ -2,7 +2,21 @@
 	.itemheader
 		= @post.title
 	.itemcontent
-		=@post.textbody
+		%h4
+			= @post.user.email
+			= t('wrote_at')
+			%span.post-date
+				= @post.created_at.strftime("%Y-%m-%d %H:%M")		
+		= @post.textbody
+		%hr
+		- if user_signed_in?
+			- if (current_user.id == @post.user_id)
+				.controls
+					.edit
+						= button_to t('edit'), edit_post_path(@post), :class => "button", :method => :get
+					.delete
+						= button_to t('delete'), post_path(@post), :class => "button", :method => :delete
+		%br
 
 %br
 = render :partial => "shared/commentForm"
@@ -15,5 +29,6 @@
 	- @comments.each do |c|
 		.itemheader
 			= c.textbody
+			
 - else
 	= t('nocomments')
