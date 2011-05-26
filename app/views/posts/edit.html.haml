@@ -2,12 +2,17 @@
 	.item
 		#title
 			= label_tag(:title, t('title'), :class => "form-label")
+			%br
 			= f.text_field :title, :size => "60"
+			%br
+			%br			
 		#textbody
 			= label_tag(:textbody, t('textbody'), :class => "form-label")
+			%br
 			= f.text_area :textbody, :size => "60x10"
 			%br
 			= label_tag(:tag_list, t('tags'), :class => "form-label")
+			%br
 			= f.text_field :tag_list, :size => "40"			
 		#button
 			= submit_tag t('update'), :class => "button"
