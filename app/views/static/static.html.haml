@@ -7,9 +7,16 @@
 			%img{'src' => "images/two.png", 'class' => 'pic-2 pic' }
 			%img{'src' => "images/three.jpg", 'class' => 'pic-3 pic' }
 			%img{'src' => "images/four.jpg", 'class' => 'pic-4 pic' }
-%br
-#another-block
-	#left
-		%input{'type' => "button", 'value' => "Left"}
-	#right
-		%input{'type' => "button", "value" => "right"}			
+	.control-block
+		.left-control-block
+		.right-control-block
+		.middle-control-block
+			.left-content-block
+				#controls
+					%img{'src' => '/images/left-arrow.png', 'id' => 'left'}
+					%img{'src' => '/images/right-arrow.png', 'id' => 'right'}
+			.right-content-block
+				#link-text
+					= link_to 'Начать обучение >> ', root_path
+			.middle-content-block
+				Фотографиям вашего ребенка позавидуют даже звезды

@@ -38,3 +38,61 @@ $width: 100px;
 .enabled {
 	display: block;
 }
+.control-block {
+	position: absolute;
+	top: 220px;
+	z-index: 999;
+	width: 60%;
+	margin-left: 12%;
+	margin-right: 18%;
+}
+.left-control-block {
+	background: url('/images/left-block-bg.png') right top;
+	width: 7px;
+	height: 79px;
+	float: left;
+}
+.right-control-block {
+	background: url('/images/right-block-bg.png') left top;
+	width: 7px;
+	height: 79px;
+	float: right;
+}
+.middle-control-block {
+	background: url('/images/block-bg.png');
+	margin-left: 7px;
+	margin-right: 7px;
+	height: 78px;
+	color: white;
+}
+.middle-content-block {
+	padding-top: 10px;
+	font-size: 16pt;
+	font-style: Arial;
+	line-height: 1.2;
+}
+.right-content-block {
+	float: right;
+}
+.right-content-block a  {
+	font-size: 16pt;
+	font-style: Arial;	
+	text-decoration: none;
+	color: white;
+}
+.left-content-block {
+	float: left;
+	z-index: 100;
+}
+#controls {
+	position: relative;
+	top: 12px;
+}
+#block-text {
+	position: relative;
+	top: 10px;
+}
+#link-text {
+	position: relative;
+	top: 30px;
+}
